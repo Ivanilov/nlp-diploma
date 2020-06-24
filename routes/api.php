@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/users', function () {
     return factory('App\User', 10)->make();
 });
+Route::get('/testText', 'TestController@index');
