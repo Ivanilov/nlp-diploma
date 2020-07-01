@@ -22,3 +22,6 @@ Route::get('/users', function () {
 Route::get('/language', 'TestController@languageDetect');
 Route::get('/article', 'TestController@articleExtract');
 Route::get('/sentiment', 'TestController@sentiment');
+Route::get('/entityExtraction', 'TestController@entityExtraction');
+Route::get('/neighbouring', 'TestController@neighbouring');
+Route::get('/summarization', 'TestController@summarization');
