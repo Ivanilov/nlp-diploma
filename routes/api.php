@@ -25,3 +25,5 @@ Route::get('/sentiment', 'TestController@sentiment');
 Route::get('/entityExtraction', 'TestController@entityExtraction');
 Route::get('/neighbouring', 'TestController@neighbouring');
 Route::get('/summarization', 'TestController@summarization');
+Route::get('/concept', 'TestController@concept');
+
