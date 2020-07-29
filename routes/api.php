@@ -19,11 +19,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/users', function () {
     return factory('App\User', 10)->make();
 });
-Route::get('/language', 'TestController@languageDetect');
-Route::get('/article', 'TestController@articleExtract');
-Route::get('/sentiment', 'TestController@sentiment');
-Route::get('/entityExtraction', 'TestController@entityExtraction');
-Route::get('/neighbouring', 'TestController@neighbouring');
-Route::get('/summarization', 'TestController@summarization');
-Route::get('/concept', 'TestController@concept');
+Route::get('/language', 'ApiController@languageDetect');
+Route::get('/article', 'ApiController@articleExtract');
+Route::get('/sentiment', 'ApiController@sentiment');
+Route::get('/entityExtraction', 'ApiController@entityExtraction');
+Route::get('/neighbouring', 'ApiController@neighbouring');
+Route::get('/summarization', 'ApiController@summarization');
+Route::get('/concept', 'ApiController@concept');
 

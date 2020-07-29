@@ -2,9 +2,11 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
+import { Plugin } from 'vue-fragment'
 
 Vue.use(VueRouter);
 Vue.use(Buefy);
+Vue.use(Plugin)
 
 import App from './components/App'
 import Hello from './components/pages/Hello'

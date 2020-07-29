@@ -1,10 +1,8 @@
 <template>
-    <section class="section">
+    <fragment>
         <navbar></navbar>
-        <div class="container is-fluid">
-            <router-view></router-view>
-        </div>
-    </section>
+        <router-view></router-view>
+    </fragment>
 </template>
 <script>
     import Navbar from './Navbar';

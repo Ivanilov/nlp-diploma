@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Web64\Nlp\MsConceptGraph;
 use Web64\Nlp\NlpClient;
 
-class TestController extends Controller
+class ApiController extends Controller
 {
     public function languageDetect()
     {

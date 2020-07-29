@@ -1,20 +1,23 @@
 <template>
-<div class="users">
-    <div class="loading" v-if="loading">
-        Loading...
-    </div>
+    <section class="section">
+        <div class="box users">
+            <div class="loading" v-if="loading">
+                Loading...
+            </div>
 
-    <div v-if="error" class="error">
-        {{ error }}
-    </div>
+            <div v-if="error" class="error">
+                {{ error }}
+            </div>
 
-    <ul v-if="users">
-        <li v-for="{ name, email } in users">
-            <strong>Name:</strong> {{ name }},
-            <strong>Email:</strong> {{ email }}
-        </li>
-    </ul>
-</div>
+            <ul v-if="users">
+                <li v-for="{ name, email } in users">
+                    <strong>Name:</strong> {{ name }},
+                    <strong>Email:</strong> {{ email }}
+                </li>
+            </ul>
+            
+        </div>
+    </section>
 </template>
 <script>
     import axios from 'axios';
