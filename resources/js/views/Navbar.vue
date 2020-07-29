@@ -1,0 +1,20 @@
+<template>
+    <b-navbar type="is-primary" :fixed-top="true">
+        <template slot="brand">
+            <b-navbar-item tag="router-link" :to="{name: 'home'}">
+                <h1> NLP DIPLOMA</h1>
+            </b-navbar-item>
+        </template>
+        <template slot="end">
+            <b-navbar-item tag="router-link" :to="{name: 'home'}">
+                Домой
+            </b-navbar-item>
+            <b-navbar-item tag="router-link" :to="{name: 'hello'}">
+                Привет, мир!
+            </b-navbar-item>
+            <b-navbar-item tag="router-link" :to="{name: 'users.index'}">
+                Пользователи
+            </b-navbar-item>
+        </template>
+    </b-navbar>
+</template>

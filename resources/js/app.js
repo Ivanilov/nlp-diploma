@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Buefy from 'buefy';
+import 'buefy/dist/buefy.css';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
+Vue.use(Buefy);
 
 import App from './views/App'
 import Hello from './views/Hello'
