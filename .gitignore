@@ -13,3 +13,4 @@ yarn-error.log
 .idea/
 nohup.out
 nlpserver/
+public/js/*

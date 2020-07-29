@@ -6,10 +6,10 @@ import 'buefy/dist/buefy.css';
 Vue.use(VueRouter);
 Vue.use(Buefy);
 
-import App from './views/App'
-import Hello from './views/Hello'
-import Home from './views/Home'
-import UsersIndex from './views/UsersIndex'
+import App from './components/App'
+import Hello from './components/pages/Hello'
+import Home from './components/pages/Home'
+import UsersIndex from './components/pages/UsersIndex'
 
 const router = new VueRouter({
     mode: 'history',
