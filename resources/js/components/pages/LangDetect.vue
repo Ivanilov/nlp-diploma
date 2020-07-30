@@ -1,13 +1,13 @@
 <template>
     <fragment>
-        <section class="hero is-dark">
+        <section class="hero is-primary">
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title">
-                        Primary title
+                        Определение языка
                     </h1>
                     <h2 class="subtitle">
-                        Primary subtitle
+                        Быстрое определение языка из введенного текста
                     </h2>
                 </div>
             </div>

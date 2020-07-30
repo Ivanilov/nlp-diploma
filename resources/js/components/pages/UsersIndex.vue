@@ -15,22 +15,24 @@
                     <strong>Email:</strong> {{ email }}
                 </li>
             </ul>
-            
         </div>
     </section>
 </template>
 <script>
     import axios from 'axios';
+    import { mapState } from 'vuex';
     export default {
         data() {
             return {
                 loading: false,
-                users: null,
                 error: null,
             };
         },
+        computed: mapState({
+            users: state => state.users
+        }),
         created() {
-            this.fetchData();
+            // this.fetchData();
         },
         methods: {
             fetchData() {

@@ -3,13 +3,14 @@ import VueRouter from 'vue-router'
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
 import { Plugin } from 'vue-fragment'
+import store from './components/store/store'
 
 Vue.use(VueRouter);
 Vue.use(Buefy);
-Vue.use(Plugin)
+Vue.use(Plugin);
 
 import App from './components/App'
-import Hello from './components/pages/Hello'
+import LangDetect from './components/pages/LangDetect'
 import Home from './components/pages/Home'
 import UsersIndex from './components/pages/UsersIndex'
 
@@ -22,9 +23,9 @@ const router = new VueRouter({
             component: Home
         },
         {
-            path: '/hello',
-            name: 'hello',
-            component: Hello,
+            path: '/lang-detect',
+            name: 'lang.detect',
+            component: LangDetect,
         },
         {
             path:'/users',
@@ -36,6 +37,7 @@ const router = new VueRouter({
 
 const app = new Vue({
     el: '#app',
+    store: store,
     components: { App },
     router,
 });

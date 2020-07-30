@@ -1,5 +1,5 @@
 <template>
-    <b-navbar type="is-primary" :fixed-top="true">
+    <b-navbar type="is-dark" :fixed-top="true">
         <template slot="brand">
             <b-navbar-item tag="router-link" :to="{name: 'home'}">
                 <h1> NLP DIPLOMA</h1>
@@ -9,8 +9,8 @@
             <b-navbar-item tag="router-link" :to="{name: 'home'}">
                 Домой
             </b-navbar-item>
-            <b-navbar-item tag="router-link" :to="{name: 'hello'}">
-                Привет, мир!
+            <b-navbar-item tag="router-link" :to="{name: 'lang.detect'}">
+                Определение языка
             </b-navbar-item>
             <b-navbar-item tag="router-link" :to="{name: 'users.index'}">
                 Пользователи
