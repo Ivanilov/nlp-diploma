@@ -17,7 +17,7 @@
                 <div class="box" v-if="result">
                     <h1 class="title">Ваш язык:</h1>
                     <h2 class="subtitle">
-                        {{result}}
+                        {{ resultDetailed ? resultDetailed : result }}
                     </h2>
                 </div>
                 <div class="box">
@@ -45,7 +45,7 @@
     </fragment>
 </template>
 <script>
-    import {getLanguage} from "../../api";
+    import { getLanguage, getLanguageInfo } from "../../api";
 
     export default {
         data() {
@@ -53,6 +53,7 @@
                 loading:false,
                 text:'',
                 result:'',
+                resultDetailed:'',
                 error:false,
                 errorMessage:''
             }
@@ -73,6 +74,9 @@
             setResult(data) {
                 this.result = data;
             },
+            setResultDetailed(data) {
+                this.resultDetailed = data;
+            },
             notify(message, isSuccess) {
                 this.$buefy.notification.open({
                     duration:5000,
@@ -88,19 +92,35 @@
                 getLanguage(
                     that.setDataToSend(),
                     (language) => {
-                        console.log(language);
                         that.setLoading(false);
                         that.notify('Запрос успешно выполнен!', true);
                         that.setResult(language.data.language);
+                        that.getMoreLanguageInfo(language.data.language);
                     },
                     (error) => {
-                        console.log(error);
                         that.setLoading(false);
                         that.notify('Произошла ошибка!', false);
                         that.setResult('');
                         that.setError(true, error);
                     }
                 )
+            },
+            getMoreLanguageInfo(code) {
+                let that = this;
+                if(code) {
+                    getLanguageInfo(
+                        code,
+                        (data) => {
+                            let lang = data.data[0].languages.filter(language => language.iso639_1 === code);
+                            console.log(lang);
+                            if(lang)
+                                that.setResultDetailed(lang[0].name + '/ ' + lang[0].nativeName);
+                        },
+                        (error) => {
+                            that.setResultDetailed('');
+                        }
+                    )
+                }
             }
         }
     }
