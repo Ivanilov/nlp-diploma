@@ -12,7 +12,6 @@ Vue.use(Plugin);
 import App from './components/App'
 import LangDetect from './components/pages/LangDetect'
 import Home from './components/pages/Home'
-import UsersIndex from './components/pages/UsersIndex'
 
 const router = new VueRouter({
     mode: 'history',
@@ -26,11 +25,6 @@ const router = new VueRouter({
             path: '/lang-detect',
             name: 'lang.detect',
             component: LangDetect,
-        },
-        {
-            path:'/users',
-            name:'users.index',
-            component: UsersIndex
         }
     ],
 });

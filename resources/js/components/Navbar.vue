@@ -12,9 +12,6 @@
             <b-navbar-item tag="router-link" :to="{name: 'lang.detect'}">
                 Определение языка
             </b-navbar-item>
-            <b-navbar-item tag="router-link" :to="{name: 'users.index'}">
-                Пользователи
-            </b-navbar-item>
         </template>
     </b-navbar>
 </template>

@@ -8,13 +8,14 @@ use Web64\Nlp\NlpClient;
 
 class ApiController extends Controller
 {
-    public function languageDetect()
+    public function languageDetect(Request $request)
     {
         //detecting language from text
-        $test_text = 'Hello world!';
         $client = new NlpClient(env('NLP_URL'));
-        $detected_lang = $client->language($test_text);
-        dd($detected_lang);
+        $detected_lang = $client->language($request->input('text'));
+        return response([
+            'language' => $detected_lang
+        ]);
     }
 
     public function articleExtract()

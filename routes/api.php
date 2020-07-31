@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/users', function () {
     return factory('App\User', 10)->make();
 });
-Route::get('/language', 'ApiController@languageDetect');
+Route::post('/language', 'ApiController@languageDetect');
 Route::get('/article', 'ApiController@articleExtract');
 Route::get('/sentiment', 'ApiController@sentiment');
 Route::get('/entityExtraction', 'ApiController@entityExtraction');
