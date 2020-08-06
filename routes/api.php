@@ -21,7 +21,7 @@ Route::get('/users', function () {
 });
 Route::post('/language', 'ApiController@languageDetect');
 Route::get('/article', 'ApiController@articleExtract');
-Route::get('/sentiment', 'ApiController@sentiment');
+Route::post('/sentiment', 'ApiController@sentiment');
 Route::get('/entityExtraction', 'ApiController@entityExtraction');
 Route::get('/neighbouring', 'ApiController@neighbouring');
 Route::get('/summarization', 'ApiController@summarization');

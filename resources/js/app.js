@@ -12,6 +12,7 @@ Vue.use(Plugin);
 import App from './components/App'
 import LangDetect from './components/pages/LangDetect'
 import Home from './components/pages/Home'
+import Sentiment from "./components/pages/Sentiment";
 
 const router = new VueRouter({
     mode: 'history',
@@ -25,6 +26,11 @@ const router = new VueRouter({
             path: '/lang-detect',
             name: 'lang.detect',
             component: LangDetect,
+        },
+        {
+            path: '/sentiment',
+            name: 'sentiment',
+            component: Sentiment
         }
     ],
 });

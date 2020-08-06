@@ -26,15 +26,17 @@ class ApiController extends Controller
         dd($article);
     }
 
-    public function sentiment()
+    public function sentiment(Request $request)
     {
         //getting positive or negative sentiment from text
         //if text has positive value -> 1
         //if negative -> -1
         //neutral -> 0
         $client = new NlpClient(env('NLP_URL'));
-        $polyglot = $client->polyglot_entities('I love you','en');
-        dd($polyglot->getSentiment());
+        $polyglot = $client->polyglot_entities($request->input('text', null),$request->input('language','en'));
+        return response([
+            'sentiment' => $polyglot->getSentiment()
+        ]);
     }
 
     public function entityExtraction()
