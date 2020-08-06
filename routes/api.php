@@ -23,7 +23,7 @@ Route::post('/language', 'ApiController@languageDetect');
 Route::get('/article', 'ApiController@articleExtract');
 Route::post('/sentiment', 'ApiController@sentiment');
 Route::get('/entityExtraction', 'ApiController@entityExtraction');
-Route::get('/neighbouring', 'ApiController@neighbouring');
+Route::post('/neighbouring', 'ApiController@neighbouring');
 Route::get('/summarization', 'ApiController@summarization');
 Route::get('/concept', 'ApiController@concept');
 

@@ -23,7 +23,14 @@ export function getLanguageInfo(code, successCallback, errorCallback) {
 
 export function getSentiment(data, successCallback, errorCallback) {
     return axios
-        .post('api/sentiment', data)
+        .post('/api/sentiment', data)
+        .then(successCallback)
+        .catch(errorCallback);
+}
+
+export function getNeighbouring(data, successCallback, errorCallback) {
+    return axios
+        .post('/api/neighbouring', data)
         .then(successCallback)
         .catch(errorCallback);
 }

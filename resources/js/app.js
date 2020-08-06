@@ -1,18 +1,19 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
-import { Plugin } from 'vue-fragment'
-import store from './components/store/store'
+import { Plugin } from 'vue-fragment';
+import store from './components/store/store';
 
 Vue.use(VueRouter);
 Vue.use(Buefy);
 Vue.use(Plugin);
 
-import App from './components/App'
-import LangDetect from './components/pages/LangDetect'
-import Home from './components/pages/Home'
+import App from './components/App';
+import LangDetect from './components/pages/LangDetect';
+import Home from './components/pages/Home';
 import Sentiment from "./components/pages/Sentiment";
+import Neighbouring from "./components/pages/Neighbouring";
 
 const router = new VueRouter({
     mode: 'history',
@@ -31,6 +32,11 @@ const router = new VueRouter({
             path: '/sentiment',
             name: 'sentiment',
             component: Sentiment
+        },
+        {
+            path: '/neighbouring',
+            name: 'neighbouring',
+            component: Neighbouring
         }
     ],
 });

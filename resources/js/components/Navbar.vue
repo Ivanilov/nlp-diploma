@@ -15,6 +15,9 @@
             <b-navbar-item tag="router-link" :to="{name: 'sentiment'}">
                 Тональность
             </b-navbar-item>
+            <b-navbar-item tag="router-link" :to="{name: 'neighbouring'}">
+                Синонимы
+            </b-navbar-item>
         </template>
     </b-navbar>
 </template>
