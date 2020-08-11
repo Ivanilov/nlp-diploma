@@ -41,3 +41,10 @@ export function getConceptGraph(data, successCallback, errorCallback) {
         .then(successCallback)
         .catch(errorCallback);
 }
+
+export function getSummerization(data, successCallback, errorCallback) {
+    return axios
+        .post('/api/summarization', data)
+        .then(successCallback)
+        .catch(errorCallback);
+}

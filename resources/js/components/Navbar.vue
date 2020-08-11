@@ -21,6 +21,9 @@
             <b-navbar-item tag="router-link" :to="{name: 'concept'}">
                 Граф значений
             </b-navbar-item>
+            <b-navbar-item tag="router-link" :to="{name: 'summarize'}">
+                Определение заключения
+            </b-navbar-item>
         </template>
     </b-navbar>
 </template>

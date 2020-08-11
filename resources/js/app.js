@@ -15,6 +15,7 @@ import Home from './components/pages/Home';
 import Sentiment from "./components/pages/Sentiment";
 import Neighbouring from "./components/pages/Neighbouring";
 import ConceptGraph from "./components/pages/ConceptGraph";
+import Summarize from "./components/pages/Summarize";
 
 const router = new VueRouter({
     mode: 'history',
@@ -43,6 +44,11 @@ const router = new VueRouter({
             path: '/concept',
             name: 'concept',
             component: ConceptGraph
+        },
+        {
+            path: '/summarize',
+            name: 'summarize',
+            component: Summarize
         }
     ],
 });
