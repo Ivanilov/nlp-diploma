@@ -25,5 +25,5 @@ Route::post('/sentiment', 'ApiController@sentiment');
 Route::get('/entityExtraction', 'ApiController@entityExtraction');
 Route::post('/neighbouring', 'ApiController@neighbouring');
 Route::get('/summarization', 'ApiController@summarization');
-Route::get('/concept', 'ApiController@concept');
+Route::post('/concept', 'ApiController@concept');
 

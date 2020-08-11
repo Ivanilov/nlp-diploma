@@ -14,6 +14,7 @@ import LangDetect from './components/pages/LangDetect';
 import Home from './components/pages/Home';
 import Sentiment from "./components/pages/Sentiment";
 import Neighbouring from "./components/pages/Neighbouring";
+import ConceptGraph from "./components/pages/ConceptGraph";
 
 const router = new VueRouter({
     mode: 'history',
@@ -37,6 +38,11 @@ const router = new VueRouter({
             path: '/neighbouring',
             name: 'neighbouring',
             component: Neighbouring
+        },
+        {
+            path: '/concept',
+            name: 'concept',
+            component: ConceptGraph
         }
     ],
 });

@@ -1,6 +1,6 @@
 <template>
     <fragment>
-        <section class="hero is-primary">
+        <section class="hero is-warning">
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title">
@@ -17,7 +17,11 @@
                 <div class="box" v-if="result">
                     <h1 class="title">Значения:</h1>
                     <h2 class="subtitle">
-                        {{ result }}
+                        <ul>
+                            <li v-for="(key, value) in result">
+                                {{ value }} - {{key}}
+                            </li>
+                        </ul>
                     </h2>
                 </div>
                 <div class="box">
@@ -36,7 +40,7 @@
                             :disabled="loading"
                         ></b-input>
                     </b-field>
-                    <b-button type="is-primary" :disabled="!text" :loading="loading" @click="getConcept">
+                    <b-button type="is-warning" :disabled="!text" :loading="loading" @click="getConcept">
                         Определить значения
                     </b-button>
                 </div>
@@ -52,7 +56,7 @@
             return {
                 loading:false,
                 text:'',
-                result:[],
+                result:null,
                 error:false,
                 errorMessage:''
             }
@@ -91,7 +95,7 @@
                     (concept) => {
                         that.setLoading(false);
                         that.notify('Запрос успешно выполнен!', true);
-                        that.setResult(concept.data.graph);
+                        that.setResult(concept.data.concept);
                     },
                     (error) => {
                         that.setLoading(false);
