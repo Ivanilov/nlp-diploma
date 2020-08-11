@@ -34,3 +34,10 @@ export function getNeighbouring(data, successCallback, errorCallback) {
         .then(successCallback)
         .catch(errorCallback);
 }
+
+export function getConceptGraph(data, successCallback, errorCallback) {
+    return axios
+        .post('/api/concept',data)
+        .then(successCallback)
+        .catch(errorCallback);
+}

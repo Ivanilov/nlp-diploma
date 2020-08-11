@@ -71,11 +71,13 @@ class ApiController extends Controller
         dd($summarization);
     }
 
-    public function concept()
+    public function concept(Request $request)
     {
         //returns graph weights of concepts of word
         $concept = new MsConceptGraph;
-        $res = $concept->get('mazda');
-        dd($res);
+        $res = $concept->get($request->input('text',null));
+        return response([
+            'concept' => $res
+        ]);
     }
 }
