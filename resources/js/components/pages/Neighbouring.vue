@@ -114,10 +114,10 @@
                 that.setLoading(true);
                 getNeighbouring(
                     that.setDataToSend(),
-                    (sentiment) => {
+                    (neighbours) => {
                         that.setLoading(false);
                         that.notify('Запрос успешно выполнен!', true);
-                        that.setResult(sentiment.data.sentiment);
+                        that.setResult(neighbours.data.neighbours);
                     },
                     (error) => {
                         that.setLoading(false);

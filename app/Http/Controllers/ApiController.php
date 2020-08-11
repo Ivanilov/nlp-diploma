@@ -57,7 +57,6 @@ class ApiController extends Controller
         //get synonyms to word
         $client = new NlpClient(env('NLP_URL'));
         $neighbours = $client->neighbours($request->input('text', null),$request->input('language','en'));
-        dd($neighbours);
         return response([
             'neighbours' => $neighbours
         ]);
