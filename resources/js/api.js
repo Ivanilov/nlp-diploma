@@ -55,3 +55,10 @@ export function getEntitiesExtract(data, successCallback, errorCallback) {
         .then(successCallback)
         .catch(errorCallback);
 }
+
+export function getArticle(data, successCallback, errorCallback) {
+    return axios
+        .post('/api/article',data)
+        .then(successCallback)
+        .catch(errorCallback);
+}

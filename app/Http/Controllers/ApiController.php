@@ -18,12 +18,14 @@ class ApiController extends Controller
         ]);
     }
 
-    public function articleExtract()
+    public function articleExtract(Request $request)
     {
         //parsing html by url or source html (getting text, author and meta-data)
         $client = new NlpClient(env('NLP_URL'));
-        $article = $client->newspaper('https://github.com/jamiebuilds/unstated-next');
-        dd($article);
+        $article = $client->newspaper($request->input('link',null));
+        return response([
+            'article' => $article
+        ]);
     }
 
     public function sentiment(Request $request)

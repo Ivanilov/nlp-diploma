@@ -27,6 +27,9 @@
             <b-navbar-item tag="router-link" :to="{name: 'entityExtract'}">
                 Определение сущностей
             </b-navbar-item>
+            <b-navbar-item tag="router-link" :to="{name: 'article'}">
+                Парсинг статьи
+            </b-navbar-item>
         </template>
     </b-navbar>
 </template>

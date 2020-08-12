@@ -20,7 +20,7 @@ Route::get('/users', function () {
     return factory('App\User', 10)->make();
 });
 Route::post('/language', 'ApiController@languageDetect');
-Route::get('/article', 'ApiController@articleExtract');
+Route::post('/article', 'ApiController@articleExtract');
 Route::post('/sentiment', 'ApiController@sentiment');
 Route::post('/entityExtraction', 'ApiController@entityExtraction');
 Route::post('/neighbouring', 'ApiController@neighbouring');

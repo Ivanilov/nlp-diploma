@@ -17,6 +17,7 @@ import Neighbouring from "./components/pages/Neighbouring";
 import ConceptGraph from "./components/pages/ConceptGraph";
 import Summarize from "./components/pages/Summarize";
 import EntityExtraction from "./components/pages/EntityExtraction";
+import Article from "./components/pages/Article";
 
 const router = new VueRouter({
     mode: 'history',
@@ -55,6 +56,11 @@ const router = new VueRouter({
             path: '/entityExtract',
             name: 'entityExtract',
             component: EntityExtraction
+        },
+        {
+            path: '/article',
+            name: 'article',
+            component: Article
         }
     ],
 });
