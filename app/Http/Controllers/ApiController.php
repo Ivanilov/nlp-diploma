@@ -39,17 +39,14 @@ class ApiController extends Controller
         ]);
     }
 
-    public function entityExtraction()
+    public function entityExtraction(Request $request)
     {
         //gets entities (locations, organizations & persons ) from text
         $client = new NlpClient(env('NLP_URL'));
-        $polyglot = $client->polyglot_entities('We live in Ukraine.
-        It is a beautiful country with wide opportunities and great people.
-        Especially I live in Kiev.
-        Our major is Vladimir Klitschko.
-        Did you hear of him?
-        He is a former boxer.','en');
-        dd($polyglot->getEntityTypes());
+        $polyglot = $client->polyglot_entities($request->input('text',null),$request->input('language','en'));
+        return response([
+            'entities' => $polyglot->getEntityTypes()
+        ]);
     }
 
     public function neighbouring(Request $request)

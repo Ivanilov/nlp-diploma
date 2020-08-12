@@ -48,3 +48,10 @@ export function getSummerization(data, successCallback, errorCallback) {
         .then(successCallback)
         .catch(errorCallback);
 }
+
+export function getEntitiesExtract(data, successCallback, errorCallback) {
+    return axios
+        .post('api/entityExtraction', data)
+        .then(successCallback)
+        .catch(errorCallback);
+}

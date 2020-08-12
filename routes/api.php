@@ -22,7 +22,7 @@ Route::get('/users', function () {
 Route::post('/language', 'ApiController@languageDetect');
 Route::get('/article', 'ApiController@articleExtract');
 Route::post('/sentiment', 'ApiController@sentiment');
-Route::get('/entityExtraction', 'ApiController@entityExtraction');
+Route::post('/entityExtraction', 'ApiController@entityExtraction');
 Route::post('/neighbouring', 'ApiController@neighbouring');
 Route::post('/summarization', 'ApiController@summarization');
 Route::post('/concept', 'ApiController@concept');

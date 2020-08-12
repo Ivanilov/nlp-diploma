@@ -24,6 +24,9 @@
             <b-navbar-item tag="router-link" :to="{name: 'summarize'}">
                 Определение заключения
             </b-navbar-item>
+            <b-navbar-item tag="router-link" :to="{name: 'entityExtract'}">
+                Определение сущностей
+            </b-navbar-item>
         </template>
     </b-navbar>
 </template>
