@@ -21,25 +21,31 @@
                             <h2>
                                 Локации:
                             </h2>
-                            <li v-for="item in result['Locations']">
-                                {{item}}
-                            </li>
+                            <ul>
+                                <li v-for="item in result['Locations']">
+                                    {{item}}
+                                </li>
+                            </ul>
                         </div>
                         <div class="column">
                             <h2>
                                 Организации:
                             </h2>
-                            <li v-for="item in result['Organizations']">
-                                {{item}}
-                            </li>
+                            <ul>
+                                <li v-for="item in result['Organizations']">
+                                    {{item}}
+                                </li>
+                            </ul>
                         </div>
                         <div class="column">
                             <h2>
                                 Личности:
                             </h2>
-                            <li v-for="item in result['Persons']">
-                                {{item}}
-                            </li>
+                            <ul>
+                                <li v-for="item in result['Persons']">
+                                    {{item}}
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <ul>
